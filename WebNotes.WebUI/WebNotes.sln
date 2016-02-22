@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EFCDF3D8-6910-4ED5-81D3-1C5B3D324159}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8FE226C8-BB90-42A6-A51F-87D761ED4FA3}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebNotes.WebUI", "src\WebNotes.WebUI\WebNotes.WebUI.xproj", "{09DF8871-F5AE-43D2-9A14-C25C275190AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09DF8871-F5AE-43D2-9A14-C25C275190AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DF8871-F5AE-43D2-9A14-C25C275190AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DF8871-F5AE-43D2-9A14-C25C275190AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DF8871-F5AE-43D2-9A14-C25C275190AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09DF8871-F5AE-43D2-9A14-C25C275190AD} = {EFCDF3D8-6910-4ED5-81D3-1C5B3D324159}
+	EndGlobalSection
+EndGlobal
