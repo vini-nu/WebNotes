@@ -98,11 +98,37 @@ namespace WebNotes.WebUI.Migrations
                     b.HasAnnotation("Relational:TableName", "AspNetUserRoles");
                 });
 
+            modelBuilder.Entity("WebNotes.WebUI.Models.Accounting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Currency");
+
+                    b.Property<int>("NextNotesLimit");
+
+                    b.Property<int>("NotesLimit");
+
+                    b.Property<DateTime>("NotesLimitsReset");
+
+                    b.Property<bool>("Premium");
+
+                    b.Property<string>("PremiumCode");
+
+                    b.Property<DateTime>("PremiumEnd");
+
+                    b.Property<string>("PremiumUserName");
+
+                    b.HasKey("Id");
+                });
+
             modelBuilder.Entity("WebNotes.WebUI.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id");
 
                     b.Property<int>("AccessFailedCount");
+
+                    b.Property<int?>("AccountingInfoId");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
@@ -180,6 +206,13 @@ namespace WebNotes.WebUI.Migrations
                     b.HasOne("WebNotes.WebUI.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("WebNotes.WebUI.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("WebNotes.WebUI.Models.Accounting")
+                        .WithMany()
+                        .HasForeignKey("AccountingInfoId");
                 });
         }
     }

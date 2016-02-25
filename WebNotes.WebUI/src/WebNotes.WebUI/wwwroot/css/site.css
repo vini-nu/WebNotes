@@ -10,9 +10,12 @@
   height: 100%;
   color: #e1ffff;
 }
+
 #sidebar .brand {
   background-color: #23282e;
-  line-height: 50px;
+  line-height: 15px;
+  height: 150px;
+  min-height: 100px;
   display: block;
   text-align: center;
   font-size: 14px;
