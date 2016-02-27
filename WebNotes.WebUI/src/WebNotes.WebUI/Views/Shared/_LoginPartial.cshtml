@@ -2,21 +2,34 @@
 
 @if (User.IsSignedIn())
 {
-    <form asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a asp-controller="Manage" asp-action="Index" title="Manage">Hello @User.GetUserName()!</a>
-            </li>
-            <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log off</button>
-            </li>
-        </ul>
+    <form asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm">
+        <li>
+            <a asp-controller="Manage" asp-action="Index" title="Manage">
+                <i class="fa fa-user fa-lg"></i> Profile Settings
+            </a>
+        </li>
+
+        <li>
+            <a asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm">
+                <button type="submit" class="btn btn-default" style="width:300px;text-align:left;">
+                    <i class="fa fa-sign-out fa-lg"></i> Log off
+                </button>
+            </a>
+        </li>
+
     </form>
 }
-else
+ else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li><a asp-controller="Account" asp-action="Register">Register</a></li>
-        <li><a asp-controller="Account" asp-action="Login">Log in</a></li>
-    </ul>
+    <li>
+        <a asp-controller="Account" asp-action="Login">
+            <i class="fa fa-sign-in fa-lg"></i> Sign in
+        </a>
+    </li>
+
+    <li>
+        <a asp-controller="Account" asp-action="Register">
+            <i class="fa fa-user fa-lg"></i> Create Account
+        </a>
+    </li>
 }

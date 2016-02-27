@@ -22,22 +22,8 @@
         <div class="menu-list">
 
             <ul id="menu-content" class="menu-content collapse out">
-                <li data-toggle="collapse" data-target="#service" class="collapsed">
-                    <a href="#">
-                        <i class="fa fa-sign-in fa-lg"></i> Sign in<span class="arrow"></span>
-                    </a>
-                </li>
-                <ul class="sub-menu collapse" id="service">
-                    <li>Username</li>
-                    <li>Password</li>
-                    <li>Submit</li>
-                </ul>
-
-                <li>
-                    <a asp-controller="Account" asp-action="Register">
-                        <i class="fa fa-user fa-lg"></i> Create Account
-                    </a>
-                </li>
+                
+                @await Html.PartialAsync("_LoginPartial")
 
                 <li data-toggle="collapse" data-target="#new" class="collapsed">
                     <a href="#"><i class="fa fa-shopping-basket fa-lg"></i> Pricing <span class="arrow"></span></a>
@@ -83,18 +69,7 @@
                     </li>
                 </ul>
                 <a asp-controller="Home" asp-action="Index" class="navbar-brand">The World</a>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" class="btn btn-small btn-info">
-                            <i class="fa fa-save"></i> Save
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-small btn-info">
-                            <i class="fa fa-print"></i> Print
-                        </a>
-                    </li>
-                </ul>
+                
             </div>
         </nav>
         <div id="main" class="container-fluid">
