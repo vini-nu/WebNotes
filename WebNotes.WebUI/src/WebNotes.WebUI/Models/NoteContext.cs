@@ -12,6 +12,7 @@ namespace WebNotes.WebUI.Models
         {
             Database.EnsureCreated();
         }
+
         public DbSet<Notebook> NoteBooks { get; set; }
         public DbSet<Note> Notes { get; set; }
         public DbSet<Tag> Tags { get; set; }

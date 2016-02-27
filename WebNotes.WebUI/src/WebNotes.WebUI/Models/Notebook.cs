@@ -8,6 +8,7 @@ namespace WebNotes.WebUI.Models
     public class Notebook
     {
         public int Id { get; set; }
+        public int UserID { get; set; }
         public string Name { get; set; }
         public bool DefaultNotebook { get; set; }
         public bool Published { get; set; }
