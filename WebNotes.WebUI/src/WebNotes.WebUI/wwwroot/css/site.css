@@ -13,9 +13,7 @@
 
 #sidebar .brand {
   background-color: #23282e;
-  line-height: 15px;
-  height: 150px;
-  min-height: 100px;
+  line-height: 40px;
   display: block;
   text-align: center;
   font-size: 14px;
@@ -134,7 +132,7 @@
     text-align: left !important;
     font-size: 22px;
     padding-left: 20px;
-    line-height: 50px !important;
+    line-height: 30px !important;
   }
 }
 @media (min-width: 767px) {
